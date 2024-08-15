@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+    --mobile: 375px;
+    --desktop: 1440px;
+    --primary-color-green-light: hsl(148, 38%, 91%);
+    --primary-color-green-medium: hsl(169, 82%, 27%);
+    --primary-color-red: hsl(0, 66%, 54%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-grey-medium: hsl(186, 15%, 59%);
+    --neutral-grey-dark: hsl(187, 24%, 22%);
+    --bold-weight: 700;
+    --normal-weight: 400;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.toast-msg{
+    position: relative;
+    width: 100%;
+    top: 5px;
+    left: 20%;
+    width: 60%;
+    
+}
+.default-msg{
+    padding: 10px 10px 10px;
+    text-align: left;
+    background-color: var(--primary-color-green-medium);
+    border-radius: .4em;
+    color: var(--neutral-white);
+}
+
+
+p{
+    color: var(--primary-color-red);
+    margin: 0 0 1em;
+}
+.toast-msg p{
+    color: var(--neutral-white);
+    margin: 0;
+}
+
+.hide{
+    /* visibility: hidden; */
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    font-size: 16px;
+    font-family: "Karla", sans-serif;
+    background-color: var(--primary-color-green-light);
+}
+
+form{
+    background-color: var(--neutral-white);
+    border-radius: 10px;
+    margin: 0 30px;
+    padding: 2em;
+}
+
+.header{
+    font-weight: var(--bold-weight);
+    font-size: 2rem;
+    color: var(--primary-color-green-medium);
+    padding-bottom: .5em;
+}
+
+.name{
+    display: flex;
+    gap: 1em;
+}
+
+.name div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.name div label{
+    font-weight: var(--bold-weight);
+    font-size: 1rem;
+    color: var(--neutral-grey-medium);
+    margin-bottom: .7em;
+}
+
+input{
+    border-radius: 4px;
+    border: .1em solid var(--neutral-grey-medium);
+    width: 100%;
+    height: 3em;
+    font-size: 1rem;
+    padding-left: 1em;
+    color: var(--neutral-grey-medium);
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.email label{
+    font-weight: var(--bold-weight);
+    font-size: 1rem;
+    color: var(--neutral-grey-medium);
+    margin-bottom: .7em;
+}
+
+.query-type{
+    display: flex;
+    flex-direction: column;
+}
+
+.query-type label{
+    font-weight: var(--bold-weight);
+    font-size: 1rem;
+    color: var(--neutral-grey-medium);
+    margin-bottom: .7em;
+}
+
+.radio{
+    display: flex;
+    gap: 1em;
+}
+
+.radio div{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--neutral-grey-medium);
+    border-radius: 4px;
+    width: 50%;
+
+}
+
+.radio input{
+    border-radius: 0;
+    width: 1em;
+    margin:  0 .8em;
+}
+
+.radio label{
+    margin: 0;
+    font-weight: var(--normal-weight);
+    color: var(--neutral-grey-dark);
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+}
+
+.message label{
+        font-weight: var(--bold-weight);
+    font-size: 1rem;
+    color: var(--neutral-grey-medium);
+    margin-bottom: .7em;
+}
+
+textarea{
+    border-radius: 4px;
+    border: .1em solid var(--neutral-grey-medium);
+    width: 100%;
+    height: 6em;
+    font-size: 1rem;
+    padding-left: 1em;
+    color: var(--neutral-grey-medium);
+    resize: none;
+}
+
+.consent{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.consent input{
+    border-radius: 0;
+    width: 1em;
+    margin-right:  0 .8em;
+}
+
+.consent label{
+    font-weight: var(--bold-weight);
+    color: var(--primary-color-green-medium);
+}
+
+button{
+    border-radius: 4px;
+    border: none;
+    background-color: var(--primary-color-green-medium);
+    width: 100%;
+    height: 3em;
+    font-size: 1rem;
+    color: var(--neutral-white);
+    font-weight: var(--bold-weight);
+    letter-spacing: 2px;
+}
+
+
+
+@media screen and (max-width: 375px){
+    .name{
+        flex-direction: column;
+        gap: 0;
+        
+    }
+
+    .name div{
+        width: 100%;
+    }
+
+    .radio{
+        flex-direction: column;
+    }
+
+    .radio div{
+        width: 100%;
+    }
+
+    .message textarea{
+        height: 10em;
+    }
+
+    .consent label{
+        font-size: .8em;
+    }
+}
