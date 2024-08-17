@@ -9,38 +9,39 @@
   <title>Frontend Mentor | Contact form</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
 
 </head>
 <body>
 
   <div class="toast-msg">
-    <div class="default-msg hide">
-      <h1>Message Sent!</h1>
-      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    <div class="default-msg" id="default-msg">
+      <h1></h1>
+      <p></p>
     </div>
   </div>
 
 
-  <form action="#">
+  <form id="my-form">
     <div class="header">
       Contact Us
     </div>
     <div class="name">
       <div>
-        <label for="First Name">First Name *</label>
-        <input type="text" placeholder="First Name">
+        <label for="firstname">First Name *</label>
+        <input type="text" id="firstname" name="firstname" placeholder="First Name">
         <p class="hide">This field is required</p>
       </div>
       <div>
-        <label for="Last Name">Last Name *</label>
-        <input type="text" placeholder="Last Name">
+        <label for="last-name">Last Name *</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Last Name">
         <p class="hide">This field is required</p>
       </div>
     </div>
 
     <div class="email">
       <label for="email">Email Address *</label>
-      <input type="email" 
+      <input type="email" id="email" name="email"
         placeholder="Enter a valid email address"
         >
       <p class="hide">This field is required</p>
@@ -48,28 +49,28 @@
 
     
     <div class="query-type">
-      <label for="query">Query type *</label>
+      <label>Query type *</label>
       <div class="radio">
         <div>
-          <input type="radio">
-          <label for="query">General Enquiry</label>
+          <input id="query2" name="query" type="radio">
+          <label for="query2">General Enquiry</label>
         </div>
         <div>
-          <input type="radio">
-          <label for="query">Support Request</label>
+          <input id="query1" name="query" type="radio">
+          <label for="query1">Support Request</label>
         </div>
       </div>
     </div>
     <p class="hide">Please select a query type</p>
 
     <div class="message">
-      <label for="Message">Message *</label>
-      <textarea rows="4" cols="50"></textarea>
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="4" cols="50"></textarea>
       <p class="hide">This field is required</p>
     </div>
 
     <div class="consent">
-      <input type="checkbox">
+      <input id="consent" name="consent" type="checkbox">
       <label for="consent">I consent to being contacted by the team *</label>
     </div>
     <p class="hide">To submit this form, please consent to being contacted</p>
