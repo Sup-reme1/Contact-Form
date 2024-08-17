@@ -8,41 +8,74 @@
   
   <title>Frontend Mentor | Contact form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-  Contact Us
+  <div class="toast-msg">
+    <div class="default-msg hide">
+      <h1>Message Sent!</h1>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  </div>
 
-  First Name
-  This field is required
 
-  Last Name
-  This field is required
+  <form action="#">
+    <div class="header">
+      Contact Us
+    </div>
+    <div class="name">
+      <div>
+        <label for="First Name">First Name *</label>
+        <input type="text" placeholder="First Name">
+        <p class="hide">This field is required</p>
+      </div>
+      <div>
+        <label for="Last Name">Last Name *</label>
+        <input type="text" placeholder="Last Name">
+        <p class="hide">This field is required</p>
+      </div>
+    </div>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+    <div class="email">
+      <label for="email">Email Address *</label>
+      <input type="email" 
+        placeholder="Enter a valid email address"
+        >
+      <p class="hide">This field is required</p>
+    </div>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+    
+    <div class="query-type">
+      <label for="query">Query type *</label>
+      <div class="radio">
+        <div>
+          <input type="radio">
+          <label for="query">General Enquiry</label>
+        </div>
+        <div>
+          <input type="radio">
+          <label for="query">Support Request</label>
+        </div>
+      </div>
+    </div>
+    <p class="hide">Please select a query type</p>
 
-  Message
-  This field is required
+    <div class="message">
+      <label for="Message">Message *</label>
+      <textarea rows="4" cols="50"></textarea>
+      <p class="hide">This field is required</p>
+    </div>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+    <div class="consent">
+      <input type="checkbox">
+      <label for="consent">I consent to being contacted by the team *</label>
+    </div>
+    <p class="hide">To submit this form, please consent to being contacted</p>
+    <button type="submit">Submit</button>
 
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+  </form>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
