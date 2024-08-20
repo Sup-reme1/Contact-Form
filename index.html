@@ -22,7 +22,7 @@
   </div>
 
 
-  <form id="my-form">
+  <form id="my-form" name="form">
     <div class="header">
       Contact Us
     </div>
@@ -33,15 +33,15 @@
         <p class="hide">This field is required</p>
       </div>
       <div>
-        <label for="last-name">Last Name *</label>
-        <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+        <label for="lastname">Last Name *</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Last Name">
         <p class="hide">This field is required</p>
       </div>
     </div>
 
     <div class="email">
       <label for="email">Email Address *</label>
-      <input type="email" id="email" name="email"
+      <input type="text" id="email" name="email"
         placeholder="Enter a valid email address"
         >
       <p class="hide">This field is required</p>
@@ -52,12 +52,12 @@
       <label>Query type *</label>
       <div class="radio">
         <div>
-          <input id="query2" name="query" type="radio">
-          <label for="query2">General Enquiry</label>
+          <input id="query1" name="query" type="radio">
+          <label for="query1">General Enquiry</label>
         </div>
         <div>
-          <input id="query1" name="query" type="radio">
-          <label for="query1">Support Request</label>
+          <input id="query2" name="query" type="radio">
+          <label for="query2">Support Request</label>
         </div>
       </div>
     </div>
@@ -70,11 +70,12 @@
     </div>
 
     <div class="consent">
-      <input id="consent" name="consent" type="checkbox">
-      <label for="consent">I consent to being contacted by the team *</label>
+      <input id="checkbox" name="checkbox" type="checkbox">
+      <label for="checkbox">I consent to being contacted by the team *</label>
     </div>
     <p class="hide">To submit this form, please consent to being contacted</p>
-    <button type="submit">Submit</button>
+    
+    <button type="submit" name="submit">Submit</button>
 
   </form>
   
