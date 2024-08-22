@@ -31,23 +31,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = document.forms['form'];    // use to get all the form input
         // const firstname = document.forms['form']['firstname'].value;    // used to get individual input directly
         let text = '';
+        const hideElements = document.querySelectorAll('.hide');
+        const input = document.querySelectorAll('input, textarea, .radio div');
+        console.log(input);
 
+        if (data['firstname'].value === '' || data['lastname'].value === '' ||
+             data['email'].value === '' || !data.elements['email'].value.includes('@') ||
+             data['query'].value === '' || data['message'].value === '' || 
+             data['message'].value === '' || !data['checkbox'].checked
+            ){
+            // alert('Firstname is empty');
+            hideElements.forEach(element => {
+                element.style.visibility = 'visible';
+            });
 
-        if (data['firstname'].value === ''){
-            alert('Firstname is empty');
-        } else if  (data['lastname'].value === ''){
-            alert('Lastname is empty');
-        } else if  (data['email'].value === '' || !data.elements['email'].value.includes('@')){
-            alert('email is not valid');
-        } else if  (data['query'].value === ''){
-            alert('Query type is not selected');
-        } else if  (data['message'].value === ''){
-            alert('Message is empty');
-        } else if  (!data['checkbox'].checked){
-            alert('consent is not checked');
+            input.forEach(element => {
+                element.style.borderColor = 'red';
+            })
+
+            // // loop to highlight the border of text box using tagname
+            // for (let i=0; i<input.length; i++){
+            //     input[i].style.borderColor = 'red';
+            // }
+
+            showToast('<i class="ri-close-line"></i> Error', "Form not complete. Complete the forms!");
         } else {
             // show toast message
-            showToast('Successful', "Thanks for completing the form. We'll be in touch soon!");
+            showToast('<i class="ri-checkbox-circle-fill"></i> Message Sent', "Thanks for completing the form. We'll be in touch soon!");
             data.reset();   // reset form input to empty
         }
         
@@ -70,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => {
                 hiddenContent.style.visibility = 'hidden';
-            }, 2000);
+            }, 5000);
         };
 
     // function to checkFormField using FormData object /////////////
