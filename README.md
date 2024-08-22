@@ -2,7 +2,6 @@
 
 ![Design preview for the Contact form coding challenge](./design/desktop-preview.jpg)
 
-## Welcome! 👋
 
 
 ## Introduction
@@ -13,7 +12,7 @@ This project is designed to help you enhance your front-end development skills b
 
 ## Project Overview
 
-Your goal is to recreate the contact form provided in the design assets. The form should be fully functional, responsive, and accessible. You should pay particular attention to form validation, user experience, and design accuracy.
+The goal is to recreate the contact form provided in the design assets. The form should be fully functional, responsive, and accessible. You should pay particular attention to form validation, user experience, and design accuracy.
 
 ## Key Features
 
