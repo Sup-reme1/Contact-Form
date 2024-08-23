@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showToast('<i class="ri-close-line"></i> Error', "Form not complete. Complete the forms!");
         } else {
             // show toast message
-            showToast('<i class="ri-checkbox-circle-fill"></i> Message Sent', "Thanks for completing the form. We'll be in touch soon!");
+            showToast('<img src="assets/images/icon-success-check.svg"> Message Sent', "Thanks for completing the form. We'll be in touch soon!");
             data.reset();   // reset form input to empty
         }
         
